@@ -3,18 +3,20 @@ import React from "react";
 const Footer = (() => {
 
   return (
-    <section id="footer" className="flex flex-row justify-between items-center p-4">
-      <div className="w-1/2 flex flex-col justify-start items-center">
-        <span>Title</span>
-        <span>Title</span>
-        <span>Title</span>
+    <>
+    <footer className="bg-dark-blue w-full flex flex-row justify-evenly text-white text-xl pt-10 pb-28">
+      <div className="flex flex-col justify-end items-center gap-y-6">
+        <a href="">Home</a>
+        <a href="">Recipes</a>
+        <i class="fa-brands fa-2x fa-github"></i>
       </div>
-      <div className="w-1/2 flex flex-col justify-start items-center">
-        <span>Title</span>
-        <span>Title</span>
-        <span>Title</span>
+      <div className="flex flex-col justify-end items-center gap-y-6">
+        <a href="">About</a>
+        <a href=""></a>
+        <i class="fa-brands fa-2x fa-instagram"></i>
       </div>
-    </section>
+    </footer>
+    </>
   );
 
 });

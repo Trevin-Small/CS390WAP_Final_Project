@@ -1,21 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './router';
-import './index.css';
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('app')
-  )
-}
+import "./index.css";
+import { App } from "./App";
 
-render(App)
-
-if (module.hot) {
-  module.hot.accept('./router', () => {
-    render(App)
-  })
-}
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
