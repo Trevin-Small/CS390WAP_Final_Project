@@ -8,7 +8,7 @@ const App = (() => {
   return (
     <>
       <Layout>
-        <section id="main-content" style={{'minHeight': "85vh"}}>
+        <section id="main-content" className="w-full" style={{'minHeight': "85vh"}}>
           <Routes>
             <Route index element={<Home />} />
           </Routes>
