@@ -1,20 +1,5 @@
 import { useState } from "react";
 
-export const navLinks = [
-  {
-    id: "home",
-    title: "Home",
-  },
-  {
-    id: "recipes",
-    title: "Recipes",
-  },
-  {
-    id: "about",
-    title: "About",
-  },
-];
-
 const MENU_CLOSE = "./assets/menu-close.svg";
 const MENU_OPEN = "./assets/menu-open.svg";
 //const LOGO = "";
@@ -32,18 +17,16 @@ const Nav = () => {
       </a>
 
       {/* Desktop Navigation */}
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
-          >
-            <a href={`#${nav.id}`}>{nav.title}</a>
-          </li>
-        ))}
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 gap-x-6">
+        <li className="font-poppins font-medium cursor-pointer text-[16px]" >
+          <a href={'/'}>Home</a>
+        </li>
+        <li className="font-poppins font-medium cursor-pointer text-[16px]">
+          <a href={"/about"}>About</a>
+        </li>
+        <li className="font-poppins font-medium cursor-pointer text-[16px]">
+          <a href={"/recipe"}>Recipe</a>
+        </li>
       </ul>
 
       {/* Mobile Navigation */}
@@ -61,18 +44,16 @@ const Nav = () => {
             !toggle ? "hidden" : "flex"
           } p-6 bg-theme-purple opacity-90 absolute top-24 right-0 mx-2 my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
+          <ul className="list-none flex justify-end items-start flex-1 flex-col gap-y-4">
+            <li className="font-poppins font-medium cursor-pointer text-[16px]">
+              <a href={"/"}>Home</a>
+            </li>
+            <li className="font-poppins font-medium cursor-pointer text-[16px]">
+              <a href={"/about"}>About</a>
+            </li>
+            <li className="font-poppins font-medium cursor-pointer text-[16px]">
+              <a href={"/recipe"}>Recipe</a>
+            </li>
           </ul>
         </div>
       </div>
