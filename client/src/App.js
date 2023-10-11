@@ -1,16 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/home";
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
+import { Home } from "./pages/home";
+import { RecipePage } from "./pages/recipe_page";
 
 const App = (() => {
 
   return (
     <>
       <Layout>
-        <section id="main-content" className="w-full" style={{'minHeight': "85vh"}}>
+        <section id="main-content" className="w-full flex flex-col justify-start items-center gap-y-4 p-6" style={{'minHeight': "85vh"}}>
           <Routes>
             <Route index element={<Home />} />
+            <Route path="/recipe" element={<RecipePage />} />
           </Routes>
         </section>
       </Layout>

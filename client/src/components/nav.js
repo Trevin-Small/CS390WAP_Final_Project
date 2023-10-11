@@ -24,9 +24,12 @@ const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="bg-light-blue w-full flex py-6 justify-between items-center navbar p-6">
+    <nav className="bg-theme-pink w-full flex p-4 justify-between items-center navbar">
       {/* Logo */}
-      <h1 className="text-3xl text-white">Recipes</h1>
+      <a href="/" className="flex flex-row items-center">
+        <img src="./assets/logo.png" alt="logo" className="w-16 h-auto m-0 mr-4 p-0" />
+        <h1 className="text-3xl text-white font-bold">Yummy Yields</h1>
+      </a>
 
       {/* Desktop Navigation */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -56,7 +59,7 @@ const Nav = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-light-blue opacity-90 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-theme-purple opacity-90 absolute top-24 right-0 mx-2 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
