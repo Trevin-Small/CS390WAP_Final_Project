@@ -3,7 +3,7 @@ import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
-import { RecipePage } from "./pages/recipe_page";
+import { RecipePage } from "./pages/recipePage";
 
 const App = (() => {
 
@@ -14,7 +14,7 @@ const App = (() => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/recipe" element={<RecipePage />} />
+            <Route path="/recipes" element={<RecipePage />} />
           </Routes>
         </section>
       </Layout>
@@ -25,11 +25,11 @@ const App = (() => {
 
 const Layout = (({children}) => {
   return (
-    <div>
+    <>
       <Nav />
       {children}
       <Footer />
-    </div>
+    </>
   );
 });
 
