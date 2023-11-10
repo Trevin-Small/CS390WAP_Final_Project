@@ -8,12 +8,12 @@ const Footer = (() => {
       <div className="flex flex-col justify-end items-center gap-y-6">
         <a href="/">Home</a>
         <a href="/recipe">Recipe</a>
-        <i className="fa-brands fa-2x fa-github"></i>
+        <a className="fa-brands fa-2x fa-github" href="https://github.com/Trevin-Small/CS390WAP_Final_Project"></a>
       </div>
       <div className="flex flex-col justify-end items-center gap-y-6">
         <a href=""></a>
         <a href="/about">About</a>
-        <i className="fa-brands fa-2x fa-instagram"></i>
+        <a className="fa-brands fa-2x fa-instagram" href="https://instagram.com"></a>
       </div>
     </footer>
     </>

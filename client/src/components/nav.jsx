@@ -26,7 +26,7 @@ const Nav = () => {
             <a href={"/about"}>About</a>
           </li>
           <li className="font-poppins font-medium cursor-pointer text-[16px]">
-            <a href={"/recipes"}>Recipe</a>
+            <a href={"/recipes"}>Recipes</a>
           </li>
         </ul>
 
