@@ -9,6 +9,6 @@ try {
 } catch(e) {
   console.error(e);
 }
-let db = conn.db("recipes");
+let db = conn.db("Cluster0");
 
 export default db;

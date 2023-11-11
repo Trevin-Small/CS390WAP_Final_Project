@@ -5,7 +5,7 @@ import { ObjectId } from 'mongodb';
 const router = express.Router();
 
 // This section will help you get a list of all the records.
-router.get("/get_recipes", async (req, res) => {
+router.get("/all", async (req, res) => {
   let collection = await db.collection("recipes");
   let results = await collection.find({})
     .limit(50)
@@ -14,9 +14,9 @@ router.get("/get_recipes", async (req, res) => {
 });
 
 // This section will help you get a single record by id
-router.get("/get_recipes/:_id", async (req, res) => {
+router.get("/:_id", async (req, res) => {
   let collection = await db.collection("recipes");
-  let query = {_id: ObjectId(req.params._id)};
+  let query = {_id: ObjectId("654ea3285c0acda309d53475")};
   let result = await collection.findOne(query);
 
   if (!result) res.redirect('/not_found').status(404);
