@@ -1,22 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { Home } from "./pages/home";
 import { RecipeList } from "./pages/recipeList";
 import { RecipePage } from "./pages/recipePage";
 import { Error } from "./pages/error";
-import { API } from './api/api';
+import { useGetAllRecipes } from './api/api';
 
 const App = (() => {
-  const [recipes, set_recipes] = useState({});
+  const [recipes, setRecipes] = useState({});
 
-  useEffect(() => {
-    set_recipes(API.get_all_recipes().then((recipes) => { return recipes}));
-  }, []);
+  const queryClient = new QueryClient();
+
+  useGetAllRecipes({
+    onSuccess: (result) => {
+      setRecipes(result);
+    }
+  });
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Nav />
         <section id="main-content" className="w-full flex flex-col justify-start items-center gap-y-4 p-6" style={{'minHeight': "85vh"}}>
           <Routes>
@@ -27,7 +32,7 @@ const App = (() => {
           </Routes>
         </section>
       <Footer />
-    </>
+    </QueryClientProvider>
   );
 
 });

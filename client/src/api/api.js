@@ -1,16 +1,12 @@
-import axios from 'axios';
+import Axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
 
-const API = (() => {
-
-  async function get_all_recipes() {
-    return (await axios.get("http://localhost:8000/get_recipes/all")).data;
-  }
-
-  return {
-    get_all_recipes
-  }
-
-})();
-
-export { API };
-
+export function useGetAllRecipes(options) {
+  return useQuery({
+    ...options,
+    queryKey: ['all_recipes'],
+    async queryFn() {
+      return (await Axios.get("http://localhost:8000/get_recipes/all")).data;
+    },
+  });
+}
