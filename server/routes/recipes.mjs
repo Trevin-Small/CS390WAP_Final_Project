@@ -14,13 +14,14 @@ router.get("/all", async (req, res) => {
 });
 
 // This section will help you get a single record by id
+/*
 router.get("/:_id", async (req, res) => {
   let collection = await db.collection("recipes");
-  let query = {_id: ObjectId("654ea3285c0acda309d53475")};
+  let query = {_id: ObjectId("654fd9475c0acda30968cd66")};
   let result = await collection.findOne(query);
 
   if (!result) res.redirect('/not_found').status(404);
   else res.send(result).status(200);
-});
+});*/
 
 export default router;
