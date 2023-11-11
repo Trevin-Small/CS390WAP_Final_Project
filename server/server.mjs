@@ -7,7 +7,7 @@ dotenv.config();
 import "express-async-errors";
 import recipes from "./routes/recipes.mjs";
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(cors());

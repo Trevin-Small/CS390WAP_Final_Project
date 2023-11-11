@@ -1,5 +1,9 @@
 import { MongoClient } from "mongodb";
-const connectionString = "mongodb+srv://cs390-yummy-yields:cAsWzFAZ9Tzb@cluster0.srlqyui.mongodb.net/?retryWrites=true&w=majority";//process.env.ATLAS_URI || "";
+
+import dotenv from "dotenv";
+dotenv.config();
+
+const connectionString = process.env.ATLAS_URI || "";
 const client = new MongoClient(connectionString);
 
 let conn;
