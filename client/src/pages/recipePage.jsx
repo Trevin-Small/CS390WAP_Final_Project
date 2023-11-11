@@ -1,6 +1,6 @@
 import { Recipe } from '../components/recipe';
 
-const RecipePage = (({}) => {
+const RecipePage = (() => {
 
   return (
     <>

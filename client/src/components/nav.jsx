@@ -2,10 +2,8 @@ import { useState } from "react";
 
 const MENU_CLOSE = "./assets/menu-close.svg";
 const MENU_OPEN = "./assets/menu-open.svg";
-//const LOGO = "";
 
-const Nav = () => {
-  const [active, setActive] = useState("Home");
+const Nav = (() => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -21,9 +19,6 @@ const Nav = () => {
         <ul className="list-none sm:flex hidden justify-end items-center flex-1 gap-x-6">
           <li className="font-poppins font-medium cursor-pointer text-[16px]" >
             <a href={'/'}>Home</a>
-          </li>
-          <li className="font-poppins font-medium cursor-pointer text-[16px]">
-            <a href={"/about"}>About</a>
           </li>
           <li className="font-poppins font-medium cursor-pointer text-[16px]">
             <a href={"/recipes"}>Recipes</a>
@@ -50,9 +45,6 @@ const Nav = () => {
                 <a href={"/"}>Home</a>
               </li>
               <li className="font-poppins font-medium cursor-pointer text-[16px]">
-                <a href={"/about"}>About</a>
-              </li>
-              <li className="font-poppins font-medium cursor-pointer text-[16px]">
                 <a href={"/recipes"}>Recipes</a>
               </li>
             </ul>
@@ -61,6 +53,6 @@ const Nav = () => {
       </nav>
     </>
   );
-};
+});
 
 export { Nav };
