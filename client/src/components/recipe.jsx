@@ -18,7 +18,7 @@ const Recipe = (({recipe}) => {
         <strong className="mt-4 text-4xl font-semibold">{recipe.name}</strong>
         <div className="mx-6 flex flex-col items-center">
           <div className="w-full my-2 rounded-lg overflow-hidden m-0">
-            <img src={recipe.img} alt="" />
+            <img src={recipe.img} alt="" className="rounded-lg" />
           </div>
           <div className="w-full px-4 flex flex-row justify-around text-sm md:text-lg">
             <div className="flex flex-col items-center">
