@@ -5,12 +5,12 @@ Recipe Website - Final project
 `cd` into both `/client` and `/server` directories, run:
 `npm install`
 
-## Run The Website
-** Server**
+## Run The Website (Note you must do both of these, in this order)
+**1. Server**
 `cd server`
 'npm start'
 
-**Client**
+**2. Client**
 `cd client`
 `npm start`
 
