@@ -1,18 +1,24 @@
-### Fall 2023 | CS390 - Web App Programming
-Recipe Website - Final project
+# Yummy Yields - Recipe Website
+### CS390 - Web App Programming Final Project | Fall 2023
 
-## Project Setup
-`cd` into both `/client` and `/server` directories, run:
-`npm install`
+# Project Setup
+**Assuming you have `node.js` installed:**  
 
-## Run The Website (Note you must do both of these, in this order)
-**1. Server**
-`cd server`
-'npm start'
+`cd` into `/client` directory, run:  
+`npm install`  
 
-**2. Client**
-`cd client`
-`npm start`
+`cd` into `/server` directory, run:  
+`npm install`  
 
-**Visit Page**
+
+# Run The Website (Note you must do both of these, in this order)
+**1. Run the server**  
+`cd server`  
+'npm start'  
+
+**2. Run the client**  
+`cd client`  
+`npm start`  
+
+**Visit the page**  
 `http://localhost:3000`
