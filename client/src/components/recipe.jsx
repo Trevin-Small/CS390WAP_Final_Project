@@ -20,7 +20,7 @@ const Recipe = (({recipe}) => {
   return (
     <>
       <div className="w-full max-w-5xl flex flex-col justify-start items-center bg-gray-300 rounded-lg text-black">
-        <strong className="mt-4 text-4xl font-semibold">{recipe.name}</strong>
+        <strong className="mt-4 text-3xl font-semibold text-center">{recipe.name}</strong>
         <div className="mx-6 flex flex-col items-center">
           <div className="w-full my-2 rounded-lg overflow-hidden m-0">
             <img src={recipe.img} alt="" className="rounded-lg" />

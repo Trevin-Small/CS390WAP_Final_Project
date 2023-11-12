@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const MENU_CLOSE = "./assets/menu-close.svg";
-const MENU_OPEN = "./assets/menu-open.svg";
+const MENU_CLOSE = "/assets/menu-close.svg";
+const MENU_OPEN = "/assets/menu-open.svg";
 
 const Nav = (() => {
   const [toggle, setToggle] = useState(false);
@@ -12,16 +12,16 @@ const Nav = (() => {
         {/* Logo */}
         <a href="/" className="flex flex-row items-center">
           <img src="/assets/logo.png" alt="logo" className="w-16 h-auto m-0 mr-4 p-0" />
-          <h1 className="text-3xl text-white font-bold">Yummy Yields</h1>
+          <h1 className="text-xl text-white font-bold sm:text-2xl md:text-3xl">Yummy Yields</h1>
         </a>
 
         {/* Desktop Navigation */}
         <ul className="list-none sm:flex hidden justify-end items-center flex-1 gap-x-6">
           <li className="font-poppins font-medium cursor-pointer text-[16px]" >
-            <a href={'/'}>Home</a>
+            <a className="text-xl" href={'/'}>Home</a>
           </li>
           <li className="font-poppins font-medium cursor-pointer text-[16px]">
-            <a href={"/recipes"}>Recipes</a>
+            <a className="text-xl" href={"/recipes"}>Recipes</a>
           </li>
         </ul>
 
@@ -38,14 +38,14 @@ const Nav = (() => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-theme-purple opacity-90 absolute top-24 right-0 mx-2 my-2 min-w-[140px] rounded-xl sidebar`}
+            } p-6 bg-theme-purple absolute h-full top-20 right-0 min-w-[140px] rounded-l-xl sidebar`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-y-4">
+            <ul className="list-none flex justify-start items-start flex-1 flex-col gap-y-4 text-white">
               <li className="font-poppins font-medium cursor-pointer text-[16px]">
-                <a href={"/"}>Home</a>
+                <a className="text-2xl " href={"/"}>Home</a>
               </li>
               <li className="font-poppins font-medium cursor-pointer text-[16px]">
-                <a href={"/recipes"}>Recipes</a>
+                <a className="text-2xl" href={"/recipes"}>Recipes</a>
               </li>
             </ul>
           </div>
