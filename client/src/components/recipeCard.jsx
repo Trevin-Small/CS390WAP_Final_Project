@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RecipeCard = (({recipe}) => {
+const RecipeCard = (({recipe, id}) => {
   let ingredients = [];
 
   for (let i = 0; i < recipe.ingredients.length; i++) {
@@ -9,12 +9,12 @@ const RecipeCard = (({recipe}) => {
 
   return (
     <>
-      <a className="w-full max-w-5xl flex flex-col justify-start items-start bg-gray-300 rounded-lg text-black" href={"/recipe?recipe=" + recipe.name}>
+      <a className="w-full max-w-5xl flex flex-col justify-start items-start bg-gray-300 rounded-lg text-black" href={"/recipe/?id=" + id}>
         <strong className="mt-4 ml-8 text-4xl font-semibold">{recipe.name}</strong>
         <div className="w-full flex flex-row justify-evenly items-start px-8 py-4 gap-x-8">
 
           <div className="w-1/2 rounded-lg overflow-hidden">
-            <img src={recipe.img} alt="" className="max-h-60" />
+            <img src={recipe.img} alt="" className="max-h-60 rounded-md" />
           </div>
 
           <div className="w-1/2 flex flex-col justify-start items-center text-center">

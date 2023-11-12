@@ -11,7 +11,7 @@ const Nav = (() => {
       <nav className="bg-theme-pink w-full flex p-4 justify-between items-center navbar">
         {/* Logo */}
         <a href="/" className="flex flex-row items-center">
-          <img src="./assets/logo.png" alt="logo" className="w-16 h-auto m-0 mr-4 p-0" />
+          <img src="/assets/logo.png" alt="logo" className="w-16 h-auto m-0 mr-4 p-0" />
           <h1 className="text-3xl text-white font-bold">Yummy Yields</h1>
         </a>
 
