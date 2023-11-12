@@ -14,7 +14,7 @@
 # Run The Website (Note you must do both of these, in this order)
 **1. Run the server**  
 `cd server`  
-'npm start'  
+`npm start`  
 
 **2. Run the client**  
 `cd client`  
