@@ -9,7 +9,12 @@ const Recipe = (({recipe}) => {
   }
 
   for (let i = 0; i < recipe.instructions.length; i++) {
-    instructions.push(<li>{recipe.instructions[i]}</li>);
+    instructions.push(
+      <div className="mb-6">
+        <strong className="text-xl">{"Step " + (i + 1)}</strong>
+        <p>{recipe.instructions[i]}</p>
+      </div>
+    );
   }
 
   return (
@@ -48,10 +53,8 @@ const Recipe = (({recipe}) => {
           </ul>
 
           <strong className="text-3xl mt-4">Instructions:</strong>
-          <hr className="w-full border-gray-600"></hr>
-          <ul className="pl-6">
-            {instructions}
-          </ul>
+          <hr className="w-full border-gray-600 mb-6"></hr>
+          {instructions}
 
         </div>
       </div>

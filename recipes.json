@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Pizza",
+    "img": "https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+    "prep_time": "10 min",
+    "cook_time": "15 min",
+    "total_time": "25 min",
+    "servings": "4",
+    "ingredients": [
+      "Pizza Dough",
+      "Pizza Sauce / Marinara Sauce",
+      "Mozarella Cheese",
+      "Toppings"
+    ],
+    "instructions": [
+      "Roll out pizza dough with a rolling pin into a 12 inch circle.",
+      "Coat the dough with a layer of pizza/marinara sauce, leaving 1/2 inch of the edges uncoated for crust. ",
+      "Place a layer of mozarella cheese on top of the sauce, ensuring to cover the entire pizza.",
+      "Put toppings of your choice on top of the cheese. For spinach or other temperature-sensitive toppings, add as garnish after baking.",
+      "Bake at 500F for roughly 10 mins, or until cheese has golden brown spots and crust is crispy on underside.",
+      "Slice pizza and enjoy!"
+    ]
+  },
+  {
+    "name": "Penne with Marinara",
+    "img": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_40/1488656/mark-bittman-today-main-191002-04.jpg",
+    "prep_time": "5 min",
+    "cook_time": "20 min",
+    "total_time": "25 min",
+    "servings": "4",
+    "ingredients": [
+      "Penne Pasta",
+      "Marinara Sauce",
+      "Garlic",
+      "White Onion",
+      "Olive Oil",
+      "Salt",
+      "Black Pepper",
+      "Basil",
+      "Parmesan Cheese"
+    ],
+    "instructions": [
+      "Bring 4 quarts of salted water to a boil, set timer for 10 mins and put pasta in water.",
+      "Strain pasta when timer expires.",
+      "Mince garlic and onion. Place in a saucepan with olive oil and cook on medium-low until onion translucent.",
+      "Add marinara sauce to garlic and onions. Simmer for 10 minutes.",
+      "Plate your pasta with marinara sauce and garnish with fresh basil. Top with parmesan cheese for extra flavor!"
+    ]
+  },
+  {
+    "name": "Coconut Chickpea Curry",
+    "img": "https://static01.nyt.com/images/2019/09/25/dining/20canrex2/merlin_160763166_1a6f5c09-3b72-48bb-8f78-3bdbc5d752f2-articleLarge.jpg",
+    "prep_time": "10 min",
+    "cook_time": "20 min",
+    "total_time": "30 min",
+    "servings": "6",
+    "ingredients": [
+      "Basmati Rice",
+      "Canned Chickpeas",
+      "Garlic",
+      "White Onion",
+      "Limes",
+      "Ginger",
+      "Cumin",
+      "Turmeric",
+      "Cayenne Pepper",
+      "Garam Masala",
+      "Coconut Milk",
+      "Cilantro",
+      "Neutral Cooking Oil",
+      "Salt"
+    ],
+    "instructions": [
+      "On medium-high heat, cook minced onion until translucent, about 6 minutes.",
+      "Add minced garlic, 1 tsp. garam masala, 1 tsp. cumin, 1/2 tsp. turmeric, 1/4 tsp. cayenne pepper. Cook for 2 minutes.",
+      "Stir in drained chickpeas, coconut milk, 1/2 cup of water and 1 tsp. of salt. Bring to a simmer and hold temperature for 10 minutes.",
+      "Add cilantro and lime juice to taste.",
+      "Serve over basmati rice with lime wedges on the side for garnish."
+    ]
+  },
+  {
+    "name": "Fried Rice",
+    "img": "https://takestwoeggs.com/wp-content/uploads/2023/03/Egg-Fried-Rice-Takestwoeggs-Final-Photography-sq.jpg",
+    "prep_time": "5 min",
+    "cook_time": "10 min",
+    "total_time": "15 min",
+    "servings": "3",
+    "ingredients": [
+      "White rice",
+      "Eggs",
+      "Neutral Cooking Oil",
+      "Garlic",
+      "Scallions",
+      "Soy Sauce",
+      "Sesame Oil",
+      "Salt",
+      "White Pepper"
+    ],
+    "instructions": [
+      "In a bowl, beat the eggs until whites and yolks are incorporated",
+      "Place a seasoned wok on high heat. Pour in 1 tablespoon neutral oil and swirl around wok.",
+      "Pour in beaten egg. Once it begins to set on the bottom, stir to scramble. Transfer out of wok.",
+      "Add more oil, and fry garlic until fragrant. Add scallion whites and fry for 30 more seconds.",
+      "Add rice, stirring until piping hot.",
+      "Return egg to wok, adding scallions greens. Mix until everything is heated.",
+      "Stir vigorously whilte adding soy sauce and sesame oil, pouring them in on the rim of the wok, not the rice.",
+      "Top with white pepper and garnish with additional scallion greens. Enjoy!"
+    ]
+  }
+]
