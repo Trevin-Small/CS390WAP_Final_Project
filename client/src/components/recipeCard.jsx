@@ -9,9 +9,9 @@ const RecipeCard = (({recipe, id}) => {
 
   return (
     <>
-      <a className="w-full max-w-5xl flex flex-col justify-start items-start bg-gray-300 rounded-lg text-black" href={"/recipe/?id=" + id}>
-        <strong className="mt-4 ml-8 text-4xl font-semibold">{recipe.name}</strong>
-        <div className="w-full flex flex-row justify-evenly items-start px-8 py-4 gap-x-8">
+      <a className="w-full max-w-5xl flex flex-col justify-start items-center bg-gray-300 rounded-lg text-black" href={"/recipe/?id=" + id}>
+        <strong className="mt-4 text-4xl font-semibold">{recipe.name}</strong>
+        <div className="w-full flex flex-col sm:flex-row justify-evenly items-center px-8 py-4 gap-x-8">
 
           <div className="w-1/2 rounded-lg overflow-hidden">
             <img src={recipe.img} alt="" className="max-h-60 rounded-md" />
