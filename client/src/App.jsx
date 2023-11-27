@@ -6,6 +6,7 @@ import { Footer } from "./components/footer";
 import { Home } from "./pages/home";
 import { RecipeList } from "./pages/recipeList";
 import { RecipePage } from "./pages/recipePage";
+import { AddRecipe } from "./pages/addRecipe";
 import { Error } from "./pages/error";
 import { getAllRecipes } from './api/api';
 
@@ -22,6 +23,7 @@ const Page = (() => {
             <Route index element={<Home />} />
             <Route path="/recipes" element={<RecipeList data={query.data || []} />} />
             <Route path="/recipe" element={<RecipePage data={query.data || []} />} />
+            <Route path="/newrecipe" element={<AddRecipe/>} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </section>
