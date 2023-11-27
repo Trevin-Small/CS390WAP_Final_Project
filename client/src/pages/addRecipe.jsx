@@ -18,7 +18,7 @@ const AddRecipe = () => {
       "img": recipeImg,
       "prep_time": prepTime + " mins",
       "cook_time": cookTime + " mins",
-      "total_time": (prepTime + cookTime) + " mins",
+      "total_time": (parseInt(prepTime) + parseInt(cookTime)) + " mins",
       "servings": servings,
       "ingredients": ingredients.split('\n'),
       "instructions": instructions.split('\n')

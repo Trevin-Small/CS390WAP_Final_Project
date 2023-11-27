@@ -22,7 +22,7 @@ const Page = (() => {
             <Route index element={<Home />} />
             <Route path="/recipes" element={<RecipeList data={query.data || []} />} />
             <Route path="/recipe" element={<RecipePage data={query.data || []} />} />
-            <Route path="/newrecipe" element={<AddRecipe/>} />
+            <Route path="/addrecipe" element={<AddRecipe/>} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </section>
