@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient, useQuery } from '@tanstack/react-query'
 import { Nav } from "./components/nav";
