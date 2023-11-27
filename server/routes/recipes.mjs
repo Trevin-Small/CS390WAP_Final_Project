@@ -29,13 +29,7 @@ router.post("/addrecipe", async (req, res) => {
     let collection = await db.collection("recipes");
     
     // the information comes in through the req.body
-
-    console.log(req.body);
-    
-    let recipe = {
-        ingredients: [],
-        instructions: []
-    }
+    let recipe = req.body;
 
     let result = await collection.insertOne(recipe);
 

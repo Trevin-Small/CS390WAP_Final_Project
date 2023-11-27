@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Load the /posts routes
-app.use("/get_recipes", recipes);
+app.use("/recipes", recipes);
 
 // Global error handling
 app.use((err, _req, res, next) => {
