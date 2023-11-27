@@ -41,6 +41,10 @@ const Nav = (() => {
             } p-6 bg-theme-purple absolute h-full top-20 right-0 min-w-[140px] rounded-l-xl sidebar`}
           >
             <ul className="list-none flex justify-start items-start flex-1 flex-col gap-y-4 text-white">
+             <li className="font-poppins font-medium cursor-pointer text-[16px]">
+                <a classname="text-2x1" href={"/newrecipe"}>Add Recipe</a>
+              </li>
+ 
               <li className="font-poppins font-medium cursor-pointer text-[16px]">
                 <a className="text-2xl " href={"/"}>Home</a>
               </li>
