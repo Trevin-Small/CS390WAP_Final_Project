@@ -6,5 +6,5 @@ export async function getAllRecipes() {
 
 export async function addNewRecipe(recipe) {
   console.log("Adding recipe: ", recipe);
-  axios.post("http://localhost:8000/recipes/addrecipe", recipe);
+  return (await axios.post("http://localhost:8000/recipes/addrecipe", recipe));
 }
