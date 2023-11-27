@@ -1,7 +1,5 @@
 import React from 'react';
 import { RecipeCard } from '../components/recipeCard';
-import { useQuery } from '@tanstack/react-query';
-import { getAllRecipes } from '../api/api';
 
 const RecipeList = (({data}) => {
   let recipeCards = [];
