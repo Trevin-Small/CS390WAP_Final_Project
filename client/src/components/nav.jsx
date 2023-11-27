@@ -42,7 +42,7 @@ const Nav = (() => {
           >
             <ul className="list-none flex justify-start items-start flex-1 flex-col gap-y-4 text-white">
              <li className="font-poppins font-medium cursor-pointer text-[16px]">
-                <a classname="text-2x1" href={"/newrecipe"}>Add Recipe</a>
+                <a className="text-2xl" href={"/newrecipe"}>Add Recipe</a>
               </li>
  
               <li className="font-poppins font-medium cursor-pointer text-[16px]">
