@@ -30,6 +30,8 @@ router.post("/addrecipe", async (req, res) => {
     
     // the information comes in through the req.body
 
+    console.log(req.body);
+    
     let recipe = {
         ingredients: [],
         instructions: []

@@ -5,5 +5,6 @@ export async function getAllRecipes() {
 }
 
 export async function addNewRecipe(recipe) {
+  console.log(recipe);
   axios.post("http://localhost:8000/addrecipe", recipe);
 }
