@@ -1,5 +1,9 @@
-import Axios from 'axios';
+import axios from 'axios';
 
-export async function getAllRecipes(options) {
-  return (await Axios.get("http://localhost:8000/get_recipes/all")).data;
+export async function getAllRecipes() {
+  return (await axios.get("http://localhost:8000/get_recipes/all")).data;
+}
+
+export async function addNewRecipe(recipe) {
+  axios.post("http://localhost:8000/addrecipe", recipe);
 }
