@@ -19,7 +19,7 @@ const Home = (() => {
           <br />
           Join our community of home cooks who appreciate the beauty of simplicity. Let's make cooking enjoyable and the results downright delicious. Welcome to Yummy Yields – where simplicity meets flavor!
         </p>
-        <a className="mt-8 p-2 bg-theme-blue text-white font-semibold rounded-lg" href="/recipes">View Recipes Now!</a>
+        <a className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 mt-4" href="/recipes">View Recipes Now!</a>
       </div>
     </>
   );

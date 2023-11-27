@@ -25,12 +25,12 @@ router.get("/:_id", async (req, res) => {
 });
 
 router.post("/addrecipe", async (req, res) => {
-    console.log("Add recipe test!")
     let collection = await db.collection("recipes");
-    
+
     // the information comes in through the req.body
     let recipe = req.body;
 
+    // Add the recipe to the databse
     let result = await collection.insertOne(recipe);
 
     if (!result) res.redirect('/not_found').status(404);
