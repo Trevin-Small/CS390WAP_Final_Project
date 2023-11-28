@@ -20,5 +20,9 @@
 `cd client`  
 `npm start`  
 
+**3. Run Tailwind**  
+`cd client`  
+`npm run tailwind`  
+
 **Visit the page**  
 `http://localhost:3000`
