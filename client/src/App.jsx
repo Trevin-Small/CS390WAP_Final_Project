@@ -7,6 +7,7 @@ import { RecipeList } from "./pages/recipeList";
 import { RecipePage } from "./pages/recipePage";
 import { AddRecipe } from "./pages/addRecipe";
 import { Error } from "./pages/error";
+import { Error404 } from "./pages/404";
 import { getAllRecipes } from './api/api';
 
 const queryClient = new QueryClient();
@@ -23,7 +24,8 @@ const Page = (() => {
             <Route path="/recipes" element={<RecipeList data={query.data || []} />} />
             <Route path="/recipe" element={<RecipePage data={query.data || []} />} />
             <Route path="/addrecipe" element={<AddRecipe/>} />
-            <Route path="/*" element={<Error />} />
+            <Route path="/error" element={<Error />} />
+            <Route path="/*" element={<Error404 />} />
           </Routes>
         </section>
       <Footer />
