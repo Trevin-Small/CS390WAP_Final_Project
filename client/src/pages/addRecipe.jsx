@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { addNewRecipe } from '../api/api';
 
 const AddRecipe = () => {
@@ -9,6 +10,8 @@ const AddRecipe = () => {
   const [servings, setRecipeServings] = useState('');
   const [ingredients, setIngredients] = useState('');
   const [instructions, setInstructions] = useState('');
+
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -24,17 +27,25 @@ const AddRecipe = () => {
       "instructions": instructions.split('\n')
     };
 
-    addNewRecipe(recipe);
+    addNewRecipe(recipe).then((resp) => {
+      setTimeout(() => {
+        navigate('/recipes');
+      }, 1000);
+    }).catch(err => {
+      navigate('/error');
+    });
   }
 
   return (
-    <div className="w-full max-w-3xl mx-auto mt-10 p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-semibold mb-6">Add a New Recipe</h2>
+    <div className="w-full max-w-3xl mx-auto mt-10 p-6 bg-gray-300 rounded-lg">
+      <div className="w-full flex flex-row justify-center mb-6">
+        <strong className="text-3xl font-bold">Add a New Recipe</strong>
+      </div>
       <form name="new-recipe-form" onSubmit={handleSubmit} >
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipeName">
+          <strong className="font-bold mb-2" htmlFor="recipeName">
             Recipe Name:
-          </label>
+          </strong>
           <input
             className="border rounded w-full py-2 px-3"
             type="text"
@@ -46,93 +57,96 @@ const AddRecipe = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipeImg">
+          <strong className="font-bold mb-2" htmlFor="recipeImg">
             Recipe Image:
-          </label>
+          </strong>
           <input
             className="border rounded w-full py-2 px-3"
             type="text"
             id="recipeImg"
-            placeholder="link to image"
+            placeholder="Link to image"
             value={recipeImg}
             onChange={(e) => setRecipeImg(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipePrepTime">
+          <strong className="font-bold mb-2" htmlFor="recipePrepTime">
             Prep Time:
-          </label>
+          </strong>
           <input
             className="border rounded w-full py-2 px-3"
             type="text"
             id="recipePrepTime"
-            placeholder="enter a number..."
+            placeholder="Enter a number..."
             value={prepTime}
             onChange={(e) => setRecipePrepTime(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipeCookTime">
+          <strong className="font-bold mb-2" htmlFor="recipeCookTime">
             Cook Time:
-          </label>
+          </strong>
           <input
             className="border rounded w-full py-2 px-3"
             type="text"
             id="recipeCookTime"
-            placeholder="enter a number..."
+            placeholder="Enter a number..."
             value={cookTime}
             onChange={(e) => setRecipeCookTime(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipeServings">
+          <strong className="font-bold mb-2" htmlFor="recipeServings">
             Servings:
-          </label>
+          </strong>
           <input
             className="border rounded w-full py-2 px-3"
             type="text"
             id="recipeServings"
-            placeholder="enter a number..."
+            placeholder="Enter a number..."
             value={servings}
             onChange={(e) => setRecipeServings(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="ingredients">
+          <strong className="font-bold mb-2" htmlFor="ingredients">
             Ingredients:
-          </label>
+          </strong>
           <textarea
             className="border rounded w-full py-2 px-3"
             id="ingredients"
-            placeholder="newline seperated list of ingredients"
+            placeholder="Newline-seperated list of ingredients"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="instructions">
+          <strong className="font-bold mb-2" htmlFor="instructions">
             Instructions:
-          </label>
+          </strong>
           <textarea
             className="border rounded w-full py-2 px-3"
             id="instructions"
-            placeholder="newline seperated list of instructions"
+            placeholder="Newline-seperated list of instructions"
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
           />
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-        >
-          Save Recipe
-        </button>
+        <div className="w-full flex flex-row justify-center">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+          >
+            Save Recipe
+          </button>
+        </div>
+
       </form>
     </div>
   );
