@@ -2,6 +2,9 @@
 ### CS390 - Web App Programming Final Project | Fall 2023
 
 # Run The Project
+**0. Install dependencies in client and server directories**  
+`npm install`  
+
 **1. Start the server**  
 `cd server`  
 `npm start`  
