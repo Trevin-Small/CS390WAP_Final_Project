@@ -11,6 +11,7 @@
 
 **2. Start the client**  
 `cd client`  
+`npm run build`
 `npm start`  
 
 **3. Run Tailwind (for development only)**  
